@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <link href='https://fonts.googleapis.com/css?family=Josefin Sans' rel='stylesheet'>
+  
+  <title>Fahim Faysal Niloy | Project Four</title>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
+  
+</head>
+
+
+<body>
+  <main>
+      <header class="branding">
+
+        <div>
+        <img src="./images/logo.svg" alt="LOGO">
+        </div>
+
+      </header>
+
+
+      <section class="image"> 
+        <div>
+          <img class="mobile-only" src="./images/hero-mobile.jpg" alt="Display Picture" >
+         </div> 
+         <div class=desktop-only>
+          <img src="./images/hero-desktop.jpg" alt="Display Picture">
+         </div>
+      </section>
+
+      <section class="details">
+          <div>
+
+              <h1><span>We're</span> coming soon</h1>
+
+              <p>
+                Hello fellow shoppers! We're currently building our new fashion store. 
+              Add your email below to stay up-to-date with announcements and our launch deals.</p>
+          </div>
+      </section>
+
+      <section class="form">
+          <form novalidate autocomplete="off">
+            <input   id="email" type="email" name="email" placeholder=" Email Address" >
+            <span onclick="ValidateEmail()" id="submit">
+            <img id="done" src="./images/icon-arrow.svg" alt="Submit">
+          </span>
+          </form>
+          <p id="errormessage" >Please provide a valid email</p>
+      
+      </section>
+
+
+     
+      
+      
+      <!-- <footer>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+          Coded by <a href="github.com/fahimfaysalniloy">Fahim Faysal Niloy</a>.
+        </p>
+      </footer> -->
+  </main>
+
+
+<script >
+  function ValidateEmail() 
+{
+ if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(document.getElementById("email").value))
+ {
+  document.getElementById("email").className="";
+  document.getElementById("errormessage").className="";
+  document.getElementById("submit").className="";
+  document.getElementById("email").value='';
+   
+
+ }
+ else{
+  document.getElementById("email").className="wrongemail";
+  document.getElementById("errormessage").className="error";
+  document.getElementById("submit").className="errorColor";
+
+ 
+ }
+  }
+</script>
+
+
+
+</body>
+</html>
